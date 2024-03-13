@@ -10,5 +10,9 @@ def index():
 def sayhi(name):
     return "Say hi, " + name
 
+@app.route('/sayhi2/<name>', methods=['GET', ])
+def sayhi2(name):
+    return "Say hi, " + name
+
 if __name__=='__main__':
     app.run(host='0.0.0.0', port=5000)
